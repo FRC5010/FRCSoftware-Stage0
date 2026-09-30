@@ -5,6 +5,7 @@
  */
 
 void main() {
+    System.out.println("Hello World!");
     // Create an integer array named `driveMotors` that holds the values
     // 1, 2, 3, 4 and print out the third value in the array.
 
