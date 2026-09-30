@@ -6,20 +6,37 @@
 
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
+interface IntakeSensor {
+    double distanceMillimeters();
+}
 
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `3.0`.
+class BeamBreak implements IntakeSensor {
+    @Override
+    public double distanceMillimeters() {
+        return 3.0;
+    }
+}
 
 
 // Create a `LaserCAN` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `5.0`.
+class LaserCAN implements IntakeSensor {
+    @Override
+    public double distanceMillimeters() {
+        return 5.0;
+    }
+}
 
 
 void main() {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.
     // Create a variable named `currentSensor` of type `IntakeSensor`, and assign it a new instance of CurrentSensor.
     // Print the result of calling `hasGamePiece()` on both sensors.
+    BeamBreak beamBreak = new BeamBreak();
+    IntakeSensor currentSensor = new CurrentSensor();
 
 
     // Create a Pair of String and Integer (Pair<String, Integer>) with the values "Robot" and 254.
