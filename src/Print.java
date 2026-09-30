@@ -6,7 +6,7 @@
 
 void main() {
     // Print "Hello World!", with a newline at the end.
-    System.out.println("Hello, World!")
+    System.out.println("Hello, World!");
 
 
     // Print the following lines, each with a separate `println()` statement:
