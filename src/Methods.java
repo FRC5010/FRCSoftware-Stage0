@@ -14,21 +14,21 @@ class ScoreKeeper {
     // A team's score can never drop below zero. Declare a
     // constant named `MIN_SCORE`, equal to `0`, to represent
     // that floor.
-    private int MIN_SCORE = 0;
+    private static int MIN_SCORE = 0;
 
     // Write a no-argument constructor `ScoreKeeper()` that starts the score
     // at `MIN_SCORE`. Instead of repeating the constructor logic, use
     // `this(...)` to call the other constructor below, passing `MIN_SCORE`
     // as the argument.
     ScoreKeeper() {
-        this.score = MIN_SCORE;
+        this(ScoreKeeper.MIN_SCORE);
     }
 
 
     // Write a constructor `ScoreKeeper(int startingScore)` that sets `score`
     // to `startingScore`.
     ScoreKeeper(int startingScore) {
-        this(MIN_SCORE);
+        this.score = startingScore;
     }
 
 
@@ -36,6 +36,10 @@ class ScoreKeeper {
     // then prints "Score is now: " followed by the new score. This method
     // doesn't need to give anything back to its caller, so its return type
     // should be `void`.
+    private void addPoints(int points) {
+        score += points;
+        
+    }
 
 
     // Write a method `applyPenalty(int points)` that subtracts `points` from
