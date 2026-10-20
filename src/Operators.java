@@ -16,33 +16,42 @@ void main() {
     // the sum of 1 and 6 with the difference of 7 and 8, and store it in the
     // `result` variable. Then, print the value of `result`.
     int result = (1 + 6) / (7 - 8);
-    int 
-    System.out.println (result);
+    System.out.println(result);
     // Given the below variable `rotPerSec`, calculate the corresponding
     // amount of rotations per hour and store it in a variable `rotPerHour`.
     // Then, print the value of `rotPerHour`.
     int rotPerSec = 5;
+    int rotPerHour = rotPerSec * 3600;
+    System.out.println(rotPerHour);
 
     // Create an integer variable `quotient1`, and assign to it the value
     // of 5 divided by 3. Then print the value of `quotient1`.
-
+    int quotient1 = 5 / 3;
+    System.out.println(quotient1);
     // Create a variable `quotient2` of type double, and assign to it the
     // value of 5.0 divided by 3. Then print the value of `quotient2`.
     // Note how Java requires at least one of the numbers to be a double in
     // order to perform the division and preserve the decimal part.
-
+    double quotient2 = 5.0 / 3.0;
+    System.out.println(quotient2);
     // Convert `rawEncoderDegrees` to its corresponding degree amount on a scale
     // from 0 to 360, using an arithmetic operator, and store this value in a
     // variable `normalizedAngle`. Then print the value of `normalizedAngle`.
     int rawEncoderDegrees = 560;
+    int normalizedAngle = rawEncoderDegrees % 360;
+    System.out.println(normalizedAngle);
 
     // Using only the increment operator, add 1 to the `timer` variable below.
     // Then print the value of `timer`.
     int timer = 1000;
+    timer++;
+    System.out.println(timer);
 
     // Using only the decrement operator, subtract 1 from the `secondsLeftInMatch`
     // variable below. Then print the value of `secondsLeftInMatch`.
     int secondsLeftInMatch = 85;
+    secondsLeftInMatch--;
+    System.out.println(secondsLeftInMatch);
 
     // Print the sum, difference, product, and quotient of the two variables
     // `num1` and `num2`. Especially take note of how the quotient is printed,
@@ -50,12 +59,16 @@ void main() {
     // integers.
     int num1 = 15;
     int num2 = 2;
-
+    System.out.println(num1 + num2);
+    System.out.println(num1 - num2);
+    System.out.println(num1 * num2);
+    System.out.println(num1 / num2);
     // Create a variable `avg` of type `double`, and assign to it the average
     // of the values 2, 5, and 4. Then print the value of `avg`.
     // HINT: How can you ensure the result is not improperly rounded?
     // In programming, we refer to such removal of decimal parts as
     // "truncation", and it often results in a loss of information if handled
     // incorrectly.
-
+    double avg = (2.0 + 5.0 + 4.0) / 3.0;
+    System.out.println(avg);
 }
