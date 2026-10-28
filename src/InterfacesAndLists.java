@@ -3,11 +3,14 @@
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
+import java.util.List;
+import java.util.ArrayList;
 
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
 interface IntakeSensor {
     double distanceMillimeters();
+    boolean hasGamePiece();
 }
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
@@ -17,6 +20,23 @@ class BeamBreak implements IntakeSensor{
     public double distanceMillimeters(){
         return 3.0;
     }
+
+    @Override
+    public boolean hasGamePiece(){
+        return true;
+    }
+}
+
+class CurrentSensor implements IntakeSensor{
+    @Override
+    public double distanceMillimeters(){
+        return 4.0;
+    }
+
+    @Override
+    public boolean hasGamePiece(){
+        return true;
+    }
 }
 
 // Create a `LaserCAN` class that implements `IntakeSensor`.
@@ -25,6 +45,11 @@ class LaserCAN implements IntakeSensor{
     @Override 
     public double distanceMillimeters(){
         return 5.0;
+    }
+
+    @Override
+    public boolean hasGamePiece(){
+        return true;
     }
 }
 
@@ -41,8 +66,8 @@ void main() {
 
     // Create a Pair of String and Integer (Pair<String, Integer>) with the values "Robot" and 254.
     // Print the first value and the second value separated by a space using getFirst() and getSecond().
-    Pair<String, Integer> robotPair = new Pair<>("Robot", 254);
-    System.out.println(robotPair.getFirst() + " " + robotPair.getSecond());
+    //Pair<String, Integer> robotPair = new Pair<>("Robot", 254);
+    //System.out.println(robotPair.getFirst() + " " + robotPair.getSecond());
 
     // Create a List of Strings (`List<String>`) named `subsystems` using `new ArrayList<>()`.
     // Add the strings "Drivetrain", "Intake", and "Shooter" to `subsystems`.
