@@ -10,23 +10,56 @@
 // Lastly, below the definitions of the `x` and `y` fields, define a static final
 // field `ORIGIN`, of type `Point`, and assign to it a new `Point` instance
 // with x = 0 and y = 0.
+private final double x;
+private final double y;
+
+public Point(double x, double y) {
+
+}
+public double getX() {
+}
+public double getY() {
+}
+public static final Point ORIGIN = new Point (0,0);
 
 
 void main() {
     // Create two `Point` objects: one representing the point (2, 5) and stored
     // in the variable `pointOne`, and the other representing the point (3, 0)
     // and stored in the variable `pointTwo`.
-
+pointOne = new Point(2,5); //because brand new point, gotta add new
+pointTwo = new Point (3,0);
 
     // On two separate lines, print the x-coordinate of pointOne,
     // and the y-coordinate of pointTwo, using the `Point` class's getter functions.
-
+System.out.println (pointOne.getX());
+System.out.println (pointTwo.gety());
     // Using the same getter functions and conditional statements,
     // print "Point one is farther right!" if `pointOne`'s x-coordinate is larger,
     // and "Point two is farther right!" if `pointTwo`'s x-coordinate is larger.
     // After the code runs, change `pointOne`'s x-coordinate to -4, and
     // `pointTwo`'s x-coordinate to -5; the code should now print
     // "Point one is farther right!"
+public double getX (){
+return this.x;
+}
+
+public double getY(){
+return this.y;
+}
+
+
+
+
+
+
+
+    if (pointOne  > pointTwo getX){
+      System.out.println("Point one if farther right!");
+    }else if(pointTwo >pointOne){
+      System.out.println("Point two is farther right!");
+    }
+
 
 
     // Using the same getter functions, use conditional statements
