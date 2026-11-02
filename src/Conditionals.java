@@ -13,10 +13,9 @@ class Drivetrain {
     public void setThrottle(int speed) {
         String throttleInfo = String.format("Spinning drivetrain motors at speed: %d", speed);
         System.out.println(throttleInfo);
-    }
-}
+    }}
 
-Drivetrain drivetrain = new Drivetrain();
+    Drivetrain drivetrain = new Drivetrain();
 
 void main(){
     // First, create a new integer variable `shooterVelocity` below the definition
@@ -34,32 +33,36 @@ void main(){
     System.out.println(shooterVelocity);
 }
 
-
     // Print "Success!" if `statusCode` is equal to 0. Otherwise, if `statusCode`
-    // is NOT EQUAL to 1, print "User exited code." Else, print "There was an error."
+    // is NOT EQUAL to 1, print "User exited code." Else, print "There was an
+    // error."
     // After running, change `statusCode` to 0, then 2; the code should print
     // "Success!" and "User exited code." respectively.
-    statusCode = 1;
-if (statusCode==0) {
-    System.out.println("Success!");
-    } else if (statusCode != 1){
-            System.out.println("User exited code.");
-        
-        } else {
-            System.out.println("There was an error."); 
-        
+    statusCode=1;if(statusCode==0)
+
+    {
+        System.out.println("Success!");
+    }else if(statusCode!=1)
+    {
+        System.out.println("User exited code.");
+
+    }else
+    {
+        System.out.println("There was an error.");
+
     }
-       
 
     // If `input` is greater than or equal to 5, print "Controller input detected."
-    // Otherwise, print "Discarding input." and set `input` to 0. Then, below the conditional
+    // Otherwise, print "Discarding input." and set `input` to 0. Then, below the
+    // conditional
     // statement, call `drivetrain.setThrottle()`, passing in the variable `input`.
     // After running the code, change `input` to 2; the code should now print
     // "Discarding input."
-    int input = 20;
-if (input >= 5) {
-System.out.println("Controller input detected.");
-     } else {
+    int input = 20;if(input>=5)
+    {
+        System.out.println("Controller input detected.");
+    }else
+    {
         System.out.println("Discarding input");
 drivetrain.setThrottle(input);
 
